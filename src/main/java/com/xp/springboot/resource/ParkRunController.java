@@ -1,30 +1,35 @@
 package com.xp.springboot.resource;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.xp.springboot.model.ParkRunner;
-import com.xp.springboot.respository.ParkRunnerRepository;
+import com.xp.springboot.service.ParkRunnerService;
 
 @RestController
 public class ParkRunController {
 
 	@Autowired
-	private ParkRunnerRepository parkRunnerRepository;
+	ParkRunnerService parkRunnerServivce;
 	
-	@GetMapping("/parkrunners/")
-	public ResponseEntity<String> geAllParkRunners() {
-		System.out.println("ParkRunController.geAllParkRunners()");
-		Iterable<ParkRunner> parkRunners =parkRunnerRepository.findAll();
-		StringBuilder sb = new StringBuilder();
+	@GetMapping("/parkrunners")
+	public ResponseEntity<List<ParkRunner>> geAllParkRunners() {
 		
-		parkRunners.forEach(runner -> sb.append(runner.getName()+ "<br>"));
+		return new ResponseEntity<List<ParkRunner>>(parkRunnerServivce.getAllParkRunners(), HttpStatus.OK);
 		
-		return new ResponseEntity<String>(sb.toString(), HttpStatus.OK);
+	}
+	
+	@PostMapping("/registerRunner")
+	public Long registerRunner(@RequestBody ParkRunner toBeParkRunner) {
 		
+		return parkRunnerServivce.registerRunner(toBeParkRunner).getParkRunId();
 	}
 	
 }
