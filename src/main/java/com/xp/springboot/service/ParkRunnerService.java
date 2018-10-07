@@ -2,10 +2,12 @@ package com.xp.springboot.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.xp.springboot.exception.ParkRunException;
 import com.xp.springboot.model.ParkRunner;
 import com.xp.springboot.respository.ParkRunnerRepository;
 
@@ -22,15 +24,18 @@ public class ParkRunnerService implements ParkRunServices {
 	}
 
 	@Override
-	public ParkRunner getParkRunnerById(Long parkRunnerId) {
-		// TODO Auto-generated method stub
-		return null;
+	public ParkRunner getParkRunnerById(Long parkRunnerId) throws ParkRunException {
+
+		Optional<ParkRunner> parkRunnerOptional = parkRunnerRepository.findById(parkRunnerId);
+		return parkRunnerOptional.orElseThrow(() -> new ParkRunException(parkRunnerId.toString(), "404", "Runner Not Found"));
+		
 	}
 
 	@Override
 	public List<ParkRunner> getAllParkRunnersByClub(String clubName) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return null; //TODO
+		
 	}
 
 	@Override
@@ -42,6 +47,11 @@ public class ParkRunnerService implements ParkRunServices {
 
 	}
 
+	@Override
+	public void updateRunnerProfile(ParkRunner runnerProfileToUpdate) {
+		
+		parkRunnerRepository.save(runnerProfileToUpdate);
+		
 	
-	
+	}	
 }
