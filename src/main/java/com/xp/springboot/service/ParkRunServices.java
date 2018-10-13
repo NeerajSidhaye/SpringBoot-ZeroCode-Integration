@@ -3,11 +3,12 @@ package com.xp.springboot.service;
 import java.util.List;
 
 import com.xp.springboot.exception.ParkRunException;
+import com.xp.springboot.model.ParkRunResponse;
 import com.xp.springboot.model.ParkRunner;
 
 public interface ParkRunServices {
 
-	public ParkRunner registerRunner(ParkRunner toBeparkRunner);
+	public ParkRunResponse registerRunner(ParkRunner toBeparkRunner);
 	
 	public ParkRunner getParkRunnerById(Long parkRunnerId) throws ParkRunException;
 	
@@ -15,6 +16,6 @@ public interface ParkRunServices {
 	
 	public List<ParkRunner> getAllParkRunners();
 	
-	public void updateRunnerProfile(ParkRunner runnerProfile);
+	public void updateRunnerProfile(Long parkRunId, ParkRunner runnerProfile) throws ParkRunException;
 	
 }

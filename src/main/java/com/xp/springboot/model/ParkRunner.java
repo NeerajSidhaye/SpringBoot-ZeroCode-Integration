@@ -13,80 +13,147 @@ public class ParkRunner {
 		@GeneratedValue
 		private Long parkRunId;
 		
-		private String name;
-		private String totalRuns;
-		private String club;
+		private String firstName;
+		private String lastName;
 		private String gender;
-		
+		private String homeRun;
+		private String runningClub;
+		private String totalRuns = "0";
+		private String email;
+		private String postCode;
+		private String emergencyContactName;
+		private String emergencyContactNumber;
 		/**
 		 * @return the parkRunId
 		 */
 		public Long getParkRunId() {
 			return parkRunId;
 		}
-
 		/**
 		 * @param parkRunId the parkRunId to set
 		 */
 		public void setParkRunId(Long parkRunId) {
 			this.parkRunId = parkRunId;
 		}
-
 		/**
-		 * @return the name
+		 * @return the firstName
 		 */
-		public String getName() {
-			return name;
+		public String getFirstName() {
+			return firstName;
 		}
-
 		/**
-		 * @param name the name to set
+		 * @param firstName the firstName to set
 		 */
-		public void setName(String name) {
-			this.name = name;
+		public void setFirstName(String firstName) {
+			this.firstName = firstName;
 		}
-
 		/**
-		 * @return the totalRuns
+		 * @return the lastName
 		 */
-		public String getTotalRuns() {
-			return totalRuns;
+		public String getLastName() {
+			return lastName;
 		}
-
 		/**
-		 * @param totalRuns the totalRuns to set
+		 * @param lastName the lastName to set
 		 */
-		public void setTotalRuns(String totalRuns) {
-			this.totalRuns = totalRuns;
+		public void setLastName(String lastName) {
+			this.lastName = lastName;
 		}
-
-		/**
-		 * @return the club
-		 */
-		public String getClub() {
-			return club;
-		}
-
-		/**
-		 * @param club the club to set
-		 */
-		public void setClub(String club) {
-			this.club = club;
-		}
-
 		/**
 		 * @return the gender
 		 */
 		public String getGender() {
 			return gender;
 		}
-
 		/**
 		 * @param gender the gender to set
 		 */
 		public void setGender(String gender) {
 			this.gender = gender;
 		}
-
-
+		/**
+		 * @return the homeRun
+		 */
+		public String getHomeRun() {
+			return homeRun;
+		}
+		/**
+		 * @param homeRun the homeRun to set
+		 */
+		public void setHomeRun(String homeRun) {
+			this.homeRun = homeRun;
+		}
+		/**
+		 * @return the runningClub
+		 */
+		public String getRunningClub() {
+			return runningClub;
+		}
+		/**
+		 * @param runningClub the runningClub to set
+		 */
+		public void setRunningClub(String runningClub) {
+			this.runningClub = runningClub;
+		}
+		/**
+		 * @return the email
+		 */
+		public String getEmail() {
+			return email;
+		}
+		/**
+		 * @param email the email to set
+		 */
+		public void setEmail(String email) {
+			this.email = email;
+		}
+		/**
+		 * @return the postCode
+		 */
+		public String getPostCode() {
+			return postCode;
+		}
+		/**
+		 * @param postCode the postCode to set
+		 */
+		public void setPostCode(String postCode) {
+			this.postCode = postCode;
+		}
+		/**
+		 * @return the emergencyContactName
+		 */
+		public String getEmergencyContactName() {
+			return emergencyContactName;
+		}
+		/**
+		 * @param emergencyContactName the emergencyContactName to set
+		 */
+		public void setEmergencyContactName(String emergencyContactName) {
+			this.emergencyContactName = emergencyContactName;
+		}
+		/**
+		 * @return the emergencyContactNumber
+		 */
+		public String getEmergencyContactNumber() {
+			return emergencyContactNumber;
+		}
+		/**
+		 * @param emergencyContactNumber the emergencyContactNumber to set
+		 */
+		public void setEmergencyContactNumber(String emergencyContactNumber) {
+			this.emergencyContactNumber = emergencyContactNumber;
+		}
+		/**
+		 * @return the totalRuns
+		 */
+		public String getTotalRuns() {
+			return totalRuns;
+		}
+		/**
+		 * @param totalRuns the totalRuns to set
+		 */
+		public void setTotalRuns(String totalRuns) {
+			this.totalRuns = totalRuns;
+		}
+		
 }

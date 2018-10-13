@@ -1,0 +1,25 @@
+{
+    "scenarioName": "Get All ParkRunners",
+    "steps": [
+	       {
+	        "name": "get_all_ParkRunners",
+            "url": "/parkrun/api/v1/runners/",
+            "operation": "GET",
+            "request": {
+        	   "name": "NEERAJ SIDHAYE",
+        	   "totalRuns": "200",
+        	   "club": "Nanwitch",
+        	   "gender": "M"
+              },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "parkRunId" : "$NOT.NULL"
+                }
+            }
+       
+	       }
+    
+    ]
+    
+}

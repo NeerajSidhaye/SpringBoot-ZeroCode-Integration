@@ -1,0 +1,33 @@
+{
+    "scenarioName": "Post Registration at ParkRun.",
+    "steps": [
+	       {
+	        "name": "post_registration_at_ParkRun",
+            "url": "/parkrun/api/v1/runners/",
+            "operation": "POST",
+            "request": {
+            	 
+		        "firstName": "Andy",
+		        "lastName": "Terris",
+		        "gender": "M",
+		        "homeRun": "Crewe",
+		        "runningClub": "Nanwitch",
+		        "email":"runme@park.com",
+		        "postCode": "LW8999",
+		        "emergencyContactName" : "emercontact",
+		        "emergencyContactNumber" :"9393939393"
+
+              },
+            "assertions": {
+                "status": 200,
+                "body": {
+                    "location" : "$NOT.NULL",
+                    "parkRunId" : "$NOT.NULL"
+                }
+            }
+       
+	       }
+    
+    ]
+    
+}

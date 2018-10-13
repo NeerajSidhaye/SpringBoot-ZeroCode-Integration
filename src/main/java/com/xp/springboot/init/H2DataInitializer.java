@@ -22,10 +22,16 @@ public class H2DataInitializer implements ApplicationRunner {
 	public void run(ApplicationArguments applicationArguments) throws Exception {
 		
 		ParkRunner parkRunner = new ParkRunner();
-		parkRunner.setName("NEERAJ SIDHAYE");
+		parkRunner.setFirstName("NEERAJ");
+		parkRunner.setLastName("SIDHAYE");
+		parkRunner.setEmail("RestAPI_integrationTest@code.com");
 		parkRunner.setTotalRuns("10");
-		parkRunner.setClub("Nanwitch");
+		parkRunner.setEmergencyContactName("emerContactName");
+		parkRunner.setEmergencyContactNumber("2929292929");
 		parkRunner.setGender("M");
+		parkRunner.setHomeRun("Crewe");
+		parkRunner.setRunningClub("NA");
+		parkRunner.setPostCode("CW2ZZZ");
 		
 		parkRunnerRepository.save(parkRunner);
 	}
