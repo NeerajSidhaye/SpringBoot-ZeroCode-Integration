@@ -8,19 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.xp.springboot.exception.ParkRunException;
+import com.xp.springboot.model.ParkRunResponse;
 import com.xp.springboot.model.ParkRunner;
 import com.xp.springboot.respository.ParkRunnerRepository;
 
+
 @Service
-public class ParkRunnerService implements ParkRunServices {
+public class ParkRunnerService implements ParkRunServices{
 
 	@Autowired
 	private ParkRunnerRepository parkRunnerRepository;
 	
-	
 	@Override
-	public ParkRunner registerRunner(ParkRunner toBeparkRunner) {
-		return parkRunnerRepository.save(toBeparkRunner);
+	public ParkRunResponse registerRunner(ParkRunner toBeparkRunner) {
+		
+		ParkRunner parkRunner =  parkRunnerRepository.save(toBeparkRunner);
+		Long parkRunId = parkRunner.getParkRunId();
+		return new ParkRunResponse(parkRunId.toString(), "Registration Sucessfull.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunId);
 	}
 
 	@Override
@@ -48,10 +52,17 @@ public class ParkRunnerService implements ParkRunServices {
 	}
 
 	@Override
-	public void updateRunnerProfile(ParkRunner runnerProfileToUpdate) {
+	public void updateRunnerProfile(Long parkRunId, ParkRunner runnerProfileToUpdate) throws ParkRunException {
+		Optional<ParkRunner> parkRunner = parkRunnerRepository.findById(parkRunId);
+		if(parkRunner.isPresent()){
+			parkRunner.get().setTotalRuns(runnerProfileToUpdate.getTotalRuns());;
+			parkRunnerRepository.save(parkRunner.get());
+		} else
+		{
+			throw new ParkRunException(parkRunId.toString(), "404", "ParkRunner profile not found for update");
+			
+		}
 		
-		parkRunnerRepository.save(runnerProfileToUpdate);
 		
-	
 	}	
 }
