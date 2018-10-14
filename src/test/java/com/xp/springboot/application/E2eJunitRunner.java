@@ -1,4 +1,4 @@
-/*package com.xp.springboot.application;
+package com.xp.springboot.application;
 
 import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.runners.model.InitializationError;
@@ -13,4 +13,3 @@ public class E2eJunitRunner extends ZeroCodeUnitRunner {
         super(myclass);
     }
 }
-*/

@@ -1,4 +1,4 @@
-/*package com.xp.springboot.integrationtest;
+package com.xp.springboot.integrationtest;
 
 import org.jsmart.zerocode.core.domain.TargetEnv;
 
@@ -17,4 +17,3 @@ public class TestGetOperations {
     }
 	
 }
-*/

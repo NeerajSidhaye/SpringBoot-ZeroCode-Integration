@@ -23,6 +23,12 @@ public class ParkRunner {
 		private String postCode;
 		private String emergencyContactName;
 		private String emergencyContactNumber;
+		
+		
+		public ParkRunner() {
+			super();
+		}
+		
 		/**
 		 * @return the parkRunId
 		 */
