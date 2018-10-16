@@ -17,6 +17,12 @@ import com.xp.springboot.model.ParkRunResponse;
 import com.xp.springboot.model.ParkRunner;
 import com.xp.springboot.service.ParkRunnerService;
 
+/**
+ * 
+ * @author Neeraj Sidhaye
+ *
+ */
+
 @RestController
 @RequestMapping("/api/v1/runners")
 public class ParkRun {

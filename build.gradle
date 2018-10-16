@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.0.5.RELEASE'
+		springBootVersion = '2.0.3.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -25,12 +25,9 @@ repositories {
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-data-jpa') {
-		exclude group: 'org.javassist'  // remove transitive buggy dependency 
-	}
-	compile('org.javassist:javassist:3.22.0-GA') // add dep with bug fix
+	compile('org.springframework.boot:spring-boot-starter-data-jpa') 
 	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.jsmart:zerocode-rest-bdd:1.2.7')
+	testCompile('org.jsmart:zerocode-rest-bdd:1.2.6')
 	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

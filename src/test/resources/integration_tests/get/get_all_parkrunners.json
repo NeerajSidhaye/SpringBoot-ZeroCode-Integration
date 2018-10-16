@@ -6,16 +6,18 @@
             "url": "/parkrun/api/v1/runners/",
             "operation": "GET",
             "request": {
-        	   "name": "NEERAJ SIDHAYE",
-        	   "totalRuns": "200",
-        	   "club": "Nanwitch",
-        	   "gender": "M"
+        	  
               },
             "assertions": {
                 "status": 200,
-                "body": {
+                "body": [
+                
+                 {
                     "parkRunId" : "$NOT.NULL"
-                }
+                 }
+                
+                ]
+                
             }
        
 	       }

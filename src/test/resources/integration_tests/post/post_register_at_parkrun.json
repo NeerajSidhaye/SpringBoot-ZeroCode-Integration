@@ -6,20 +6,18 @@
             "url": "/parkrun/api/v1/runners/",
             "operation": "POST",
             "request": {
-            	 
-		        "firstName": "Andy",
-		        "lastName": "Terris",
+            	 "body": {
+		        "firstName": "Les",
+		        "lastName": "M",
 		        "gender": "M",
-		        "homeRun": "Crewe",
-		        "runningClub": "Nanwitch",
+		        "homeRun": "Swindon",
+		        "runningClub": "RunSwindon",
 		        "email":"runme@park.com",
-		        "postCode": "LW8999",
-		        "emergencyContactName" : "emercontact",
-		        "emergencyContactNumber" :"9393939393"
-
+		        "postCode": "LW8999"
+				}
               },
             "assertions": {
-                "status": 200,
+                "status": 201,
                 "body": {
                     "location" : "$NOT.NULL",
                     "parkRunId" : "$NOT.NULL"

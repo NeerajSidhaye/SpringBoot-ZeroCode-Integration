@@ -25,11 +25,9 @@ public class H2DataInitializer implements ApplicationRunner {
 		parkRunner.setFirstName("NEERAJ");
 		parkRunner.setLastName("SIDHAYE");
 		parkRunner.setEmail("RestAPI_integrationTest@code.com");
-		parkRunner.setTotalRuns("10");
-		parkRunner.setEmergencyContactName("emerContactName");
-		parkRunner.setEmergencyContactNumber("2929292929");
+		parkRunner.setTotalRuns("28");
 		parkRunner.setGender("M");
-		parkRunner.setHomeRun("Crewe");
+		parkRunner.setHomeRun("INDORE");
 		parkRunner.setRunningClub("NA");
 		parkRunner.setPostCode("CW2ZZZ");
 		

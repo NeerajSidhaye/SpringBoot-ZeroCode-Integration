@@ -1,0 +1,47 @@
+{
+    "scenarioName": "Get ParkRuner by Id with valid and invalid parkrunId",
+    "steps": [
+	       {
+	        "name": "get_parkRunner_byValidId",
+            "url": "/parkrun/api/v1/runners/1",
+            "operation": "GET",
+            "request": {
+        	  
+              },
+            "assertions": {
+                "status": 200,
+                "body": 
+                
+                 {
+                    "parkRunId": "$NOT.NULL"
+                 }
+                
+                
+                
+            }
+       
+	       },
+	       
+	       {
+	        "name": "get_parkRunner_byInvalidId",
+            "url": "/parkrun/api/v1/runners/999",
+            "operation": "GET",
+            "request": {
+        	  
+              },
+            "assertions": {
+                "status": 404,
+                "body": 
+                
+                 {
+                    "code": "404",
+                    "message": "$CONTAINS.STRING:Not Found"
+                 }
+                
+            }
+            
+            }
+    
+    ]
+    
+}

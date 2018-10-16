@@ -21,9 +21,6 @@ public class ParkRunner {
 		private String totalRuns = "0";
 		private String email;
 		private String postCode;
-		private String emergencyContactName;
-		private String emergencyContactNumber;
-		
 		
 		public ParkRunner() {
 			super();
@@ -125,30 +122,7 @@ public class ParkRunner {
 		public void setPostCode(String postCode) {
 			this.postCode = postCode;
 		}
-		/**
-		 * @return the emergencyContactName
-		 */
-		public String getEmergencyContactName() {
-			return emergencyContactName;
-		}
-		/**
-		 * @param emergencyContactName the emergencyContactName to set
-		 */
-		public void setEmergencyContactName(String emergencyContactName) {
-			this.emergencyContactName = emergencyContactName;
-		}
-		/**
-		 * @return the emergencyContactNumber
-		 */
-		public String getEmergencyContactNumber() {
-			return emergencyContactNumber;
-		}
-		/**
-		 * @param emergencyContactNumber the emergencyContactNumber to set
-		 */
-		public void setEmergencyContactNumber(String emergencyContactNumber) {
-			this.emergencyContactNumber = emergencyContactNumber;
-		}
+
 		/**
 		 * @return the totalRuns
 		 */

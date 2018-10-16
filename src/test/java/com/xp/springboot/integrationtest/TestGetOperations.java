@@ -1,14 +1,13 @@
 package com.xp.springboot.integrationtest;
 
-import org.jsmart.zerocode.core.domain.TargetEnv;
-
-import com.xp.springboot.application.E2eJunitRunner;
 import org.jsmart.zerocode.core.domain.JsonTestCase;
-import org.junit.runner.RunWith;
+import org.jsmart.zerocode.core.domain.TargetEnv;
+import org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 @TargetEnv("application_host.properties")
-@RunWith(E2eJunitRunner.class)
+@RunWith(ZeroCodeUnitRunner.class)
 public class TestGetOperations {
 
     @Test
@@ -16,4 +15,10 @@ public class TestGetOperations {
     public void test_getAllParkRunners() throws Exception {
     }
 	
+    @Test
+    @JsonTestCase("integration_tests/get/get_parkRun_by_id.json")
+    public void test_getParkRunnerWithValidAndInvalidParkRunId(){
+    	
+    }
+    
 }
