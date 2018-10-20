@@ -2,28 +2,12 @@ package com.xp.springboot.model;
 
 public class ParkRunResponse {
 
-	private String parkRunId;
 	private String message;
 	private String location;
 	
-	public ParkRunResponse(String parkRunId, String message, String location) {
-		this.parkRunId = parkRunId;
+	public ParkRunResponse(String message, String location) {
 		this.message = message;
 		this.location=location;
-	}
-
-	/**
-	 * @return the parkRunId
-	 */
-	public String getParkRunId() {
-		return parkRunId;
-	}
-
-	/**
-	 * @param parkRunId the parkRunId to set
-	 */
-	public void setParkRunId(String parkRunId) {
-		this.parkRunId = parkRunId;
 	}
 
 	/**

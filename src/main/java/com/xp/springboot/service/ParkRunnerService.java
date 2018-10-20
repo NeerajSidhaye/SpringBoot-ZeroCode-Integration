@@ -23,8 +23,7 @@ public class ParkRunnerService implements ParkRunServices{
 	public ParkRunResponse registerRunner(ParkRunner toBeparkRunner) {
 		
 		ParkRunner parkRunner =  parkRunnerRepository.save(toBeparkRunner);
-		Long parkRunId = parkRunner.getParkRunId();
-		return new ParkRunResponse(parkRunId.toString(), "Registration Sucessfull.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunId);
+		return new ParkRunResponse("Registration Success.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunner.getParkRunId());
 	}
 
 	@Override
@@ -32,13 +31,6 @@ public class ParkRunnerService implements ParkRunServices{
 
 		Optional<ParkRunner> parkRunnerOptional = parkRunnerRepository.findById(parkRunnerId);
 		return parkRunnerOptional.orElseThrow(() -> new ParkRunException(parkRunnerId.toString(), "404", "Runner Not Found"));
-		
-	}
-
-	@Override
-	public List<ParkRunner> getAllParkRunnersByClub(String clubName) {
-
-		return null; //TODO
 		
 	}
 
@@ -52,11 +44,13 @@ public class ParkRunnerService implements ParkRunServices{
 	}
 
 	@Override
-	public void updateRunnerProfile(Long parkRunId, ParkRunner runnerProfileToUpdate) throws ParkRunException {
+	public ParkRunResponse updateRunnerProfile(Long parkRunId, ParkRunner runnerProfileToUpdate) throws ParkRunException {
 		Optional<ParkRunner> parkRunner = parkRunnerRepository.findById(parkRunId);
 		if(parkRunner.isPresent()){
-			parkRunner.get().setTotalRuns(runnerProfileToUpdate.getTotalRuns());
-			parkRunnerRepository.save(parkRunner.get());
+			ParkRunner parkRunneEntity = parkRunner.get();
+			parkRunneEntity.setTotalRuns(runnerProfileToUpdate.getTotalRuns());
+			parkRunnerRepository.save(parkRunneEntity);
+			return new ParkRunResponse("Update Success.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunneEntity.getParkRunId());
 		} else
 		{
 			throw new ParkRunException(parkRunId.toString(), "404", "ParkRunner profile not found for update");

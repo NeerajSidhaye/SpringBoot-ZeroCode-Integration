@@ -12,10 +12,8 @@ public interface ParkRunServices {
 	
 	public ParkRunner getParkRunnerById(Long parkRunnerId) throws ParkRunException;
 	
-	public List<ParkRunner>  getAllParkRunnersByClub(String clubName);
-	
 	public List<ParkRunner> getAllParkRunners();
 	
-	public void updateRunnerProfile(Long parkRunId, ParkRunner runnerProfile) throws ParkRunException;
+	public ParkRunResponse updateRunnerProfile(Long parkRunId, ParkRunner runnerProfile) throws ParkRunException;
 	
 }

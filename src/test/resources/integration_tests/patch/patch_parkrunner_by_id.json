@@ -1,0 +1,50 @@
+{
+   "scenarioName":"Partial Update ParkRunner profile and then validate the update.",
+   "steps":[
+      {
+         "name":"update_totalRuns",
+         "url":"/parkrun/api/v1/runners/1",
+         "operation":"PATCH",
+         "request":{
+            "body":{
+               "totalRuns":"345"
+            }
+         },
+         "assertions":{
+            "status":200,
+            "body":{
+               "location":"$NOT.NULL",
+               "message":"$CONTAINS.STRING:Success"
+            }
+         }
+      },
+      {
+         "name":"get_ParkRunner_updatedProfile_by_parkRunId",
+         "url":"${$.update_totalRuns.response.body.location}",
+         "operation":"GET",
+         "request":{
+
+         },
+         "assertions":{
+            "status":200,
+            "body":{
+               "parkRunId":"$NOT.NULL",
+               "totalRuns":"${$.update_totalRuns.request.body.totalRuns}"
+            }
+         }
+      },
+       {
+         "name":"update_profile_with_invalid_parkRunId",
+         "url":"/parkrun/api/v1/runners/0",
+         "operation":"PATCH",
+         "request":{
+            "body":{
+               "totalRuns":"345"
+            }
+         },
+         "assertions":{
+            "status":404 
+         }
+      }
+   ]
+}

@@ -58,9 +58,9 @@ public class ParkRun {
 	}
 	
 	@PatchMapping("/{parkRunId}")
-	public void partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody ParkRunner updateRunnerProfile) throws ParkRunException {
+	public ResponseEntity<ParkRunResponse> partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody ParkRunner updateRunnerProfile) throws ParkRunException {
 		
-		parkRunnerService.updateRunnerProfile(parkRunId, updateRunnerProfile);
+		return new ResponseEntity<>(parkRunnerService.updateRunnerProfile(parkRunId, updateRunnerProfile), HttpStatus.OK);
 		
 	}
 	

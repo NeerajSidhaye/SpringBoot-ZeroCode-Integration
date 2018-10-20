@@ -1,27 +1,21 @@
 {
-    "scenarioName": "Get All ParkRunners",
-    "steps": [
-	       {
-	        "name": "get_all_ParkRunners",
-            "url": "/parkrun/api/v1/runners/",
-            "operation": "GET",
-            "request": {
-        	  
-              },
-            "assertions": {
-                "status": 200,
-                "body": [
-                
-                 {
-                    "parkRunId" : "$NOT.NULL"
-                 }
-                
-                ]
-                
-            }
-       
-	       }
-    
-    ]
-    
+   "scenarioName":"Get All ParkRunners",
+   "steps":[
+      {
+         "name":"get_all_ParkRunners",
+         "url":"/parkrun/api/v1/runners/",
+         "operation":"GET",
+         "request":{
+
+         },
+         "assertions":{
+            "status":200,
+            "body":[
+               {
+                  "parkRunId":"$NOT.NULL"
+               }
+            ]
+         }
+      }
+   ]
 }

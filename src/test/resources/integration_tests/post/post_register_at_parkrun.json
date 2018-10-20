@@ -20,7 +20,7 @@
                 "status": 201,
                 "body": {
                     "location" : "$NOT.NULL",
-                    "parkRunId" : "$NOT.NULL"
+                    "message" : "$CONTAINS.STRING:Success"
                 }
             }
        
