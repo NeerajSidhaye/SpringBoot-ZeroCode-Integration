@@ -1,4 +1,4 @@
-# Spring-boot application - Integration-testing
+# Spring-boot, Spring-Data, H2 In-Memory DB application - Integration-testing
 This demo project exaplins how [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework based integration-tests for a "spring-boot, spring-data and H2 in-memory DB" application can make your life easy everyday.
 
 > Keep it simple and easy while doing the integration tests
@@ -12,7 +12,7 @@ This demo project exaplins how [JUnit](https://github.com/junit-team/junit4) and
 </dependency>
 ```
 
-![Integration_tests_organization](img/it_tests_org_S.png)
+![Integration_tests_organization](img/project_structure.png)
 
 ### Where are the integration tests?
 + The JUnit integration tests are located under-
