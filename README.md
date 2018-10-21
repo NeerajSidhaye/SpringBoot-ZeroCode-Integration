@@ -69,6 +69,8 @@ public class E2eJunitRunner extends ZeroCodeUnitRunner {
 }
 ```
 
+![Integration_tests_reports](img/testreport.png)
+
 [How do I do integration testing of a spring boot application]: https://github.com/authorjapps/spring-boot-integration-test#spring-boot-integration-test
 [How to do integration testing of a spring boot application]: https://github.com/authorjapps/spring-boot-integration-test#spring-boot-integration-test
 [Integration testing of a spring boot application]: https://github.com/authorjapps/spring-boot-integration-test#spring-boot-integration-test
