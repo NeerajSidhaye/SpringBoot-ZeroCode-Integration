@@ -1,4 +1,4 @@
-package com.xp.springboot.integrationtest;
+package com.xp.springboot.integrationtest.crudtests;
 
 import org.jsmart.zerocode.core.domain.JsonTestCase;
 import org.jsmart.zerocode.core.domain.TargetEnv;

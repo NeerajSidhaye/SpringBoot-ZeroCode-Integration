@@ -1,5 +1,6 @@
 package com.xp.springboot.integrationtest;
 
+import org.jsmart.zerocode.core.domain.EnvProperty;
 import org.jsmart.zerocode.core.domain.TargetEnv;
 import org.jsmart.zerocode.core.domain.TestPackageRoot;
 import org.junit.runner.RunWith;
@@ -18,6 +19,7 @@ import com.xp.springboot.application.E2eJunitSuiteRunner;
  *      - integrationtests.TestPostAndThenGetOperation.java
  *      - integrationtests.TestPostOperation.java
  */
+@EnvProperty("_${env}") 
 @TargetEnv("application_host.properties")
 @TestPackageRoot("integration_tests") //picks all tests from this folder and subfolders
 @RunWith(E2eJunitSuiteRunner.class)

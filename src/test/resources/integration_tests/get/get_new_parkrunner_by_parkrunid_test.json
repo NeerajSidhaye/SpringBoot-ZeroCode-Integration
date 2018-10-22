@@ -6,16 +6,8 @@
          "url":"/parkrun/api/v1/runners/",
          "operation":"POST",
          "request":{
-            "body":{
-               "firstName":"John",
-               "lastName":"Keier",
-               "gender":"M",
-               "homeRun":"Knutsford",
-               "runningClub":"RunMachine",
-               "email":"runme@park.com",
-               "postCode":"LW8999"
-            }
-         },
+            "body": "${JSON.FILE:reusable_content/request/register_runner_request_body.json}"
+          },
          "assertions":{
             "status":201,
             "body":{
@@ -26,7 +18,7 @@
       },
       {
          "name":"get_ParkRunner_by_parkRunId",
-         "url":"${$.registration_at_ParkRun.response.body.location}",
+         "url":"/parkrun/api/v1/runners/${$.registration_at_ParkRun.response.body.location}",
          "operation":"GET",
          "request":{
 

@@ -23,7 +23,7 @@ public class ParkRunnerService implements ParkRunServices{
 	public ParkRunResponse registerRunner(ParkRunner toBeparkRunner) {
 		
 		ParkRunner parkRunner =  parkRunnerRepository.save(toBeparkRunner);
-		return new ParkRunResponse("Registration Success.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunner.getParkRunId());
+		return new ParkRunResponse("Registration Success.", String.valueOf(parkRunner.getParkRunId()));
 	}
 
 	@Override
@@ -50,7 +50,7 @@ public class ParkRunnerService implements ParkRunServices{
 			ParkRunner parkRunneEntity = parkRunner.get();
 			parkRunneEntity.setTotalRuns(runnerProfileToUpdate.getTotalRuns());
 			parkRunnerRepository.save(parkRunneEntity);
-			return new ParkRunResponse("Update Success.", "http://localhost:8080/parkrun/api/v1/runners/"+parkRunneEntity.getParkRunId());
+			return new ParkRunResponse("Update Success.", String.valueOf(parkRunneEntity.getParkRunId()));
 		} else
 		{
 			throw new ParkRunException(parkRunId.toString(), "404", "ParkRunner profile not found for update");
