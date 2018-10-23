@@ -72,6 +72,11 @@
 	                  <goal>integration-test</goal>
 	                  <goal>verify</goal>
 	              </goals>
+                  <configuration>
+                      <includes>
+                          <include>integrationtest.IntegrationTestSuite.java</include>
+                      </includes>
+                  </configuration>	              
 	          </execution>
       	 </executions>
       </plugin>
