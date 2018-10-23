@@ -146,7 +146,7 @@ Find detailed TEST Reports (zerocode-junit-interactive-fuzzy-search.html) and lo
 ![Dashboard Report](img/testreport_detail.png)
 
 > Trace API test result from CORRELATION-ID driectly from report UI
-![Trace test request/response](img/report_search_test_by_co-relationId.png)
+![Trace test request/response](img/report_search_test_by_co-relationId.PNG)
 
 > Trace API request/response as part of TEST execution using CORRELATION-ID from log file zerocode_rest_bdd_logs.log generated under target\logs folder.
 
