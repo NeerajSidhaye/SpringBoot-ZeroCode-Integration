@@ -1,11 +1,11 @@
-package com.xp.springboot.integrationtest;
+package testsuite;
 
 import org.jsmart.zerocode.core.domain.EnvProperty;
 import org.jsmart.zerocode.core.domain.TargetEnv;
 import org.jsmart.zerocode.core.domain.TestPackageRoot;
 import org.junit.runner.RunWith;
 
-import com.xp.springboot.application.E2eJunitSuiteRunner;
+import testconfig.E2eJunitSuiteRunner;
 
 /**
  * This runs the entire test suite i.e. picking all tests under "resources/integration_tests"

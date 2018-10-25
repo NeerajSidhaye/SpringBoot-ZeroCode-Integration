@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.xp.springboot.exception.ParkRunException;
 import com.xp.springboot.model.ParkRunResponse;
 import com.xp.springboot.model.ParkRunner;
-import com.xp.springboot.service.ParkRunnerService;
+import com.xp.springboot.service.ParkRunServices;
 
 /**
  * 
@@ -27,12 +28,12 @@ import com.xp.springboot.service.ParkRunnerService;
 @RequestMapping("/api/v1/runners")
 public class ParkRun {
 
-	ParkRunnerService parkRunnerService;
+	ParkRunServices parkRunService;
 	
 	@Autowired
-	public ParkRun(ParkRunnerService parkRunnerService) {
+	public ParkRun(ParkRunServices parkRunServices) {
 		
-		this.parkRunnerService = parkRunnerService;
+		this.parkRunService = parkRunServices;
 		
 	}
 	
@@ -40,27 +41,27 @@ public class ParkRun {
 	@GetMapping
 	public ResponseEntity<List<ParkRunner>> geAllParkRunners() {
 		
-		return new ResponseEntity<List<ParkRunner>>(parkRunnerService.getAllParkRunners(), HttpStatus.OK);
+		return new ResponseEntity<List<ParkRunner>>(parkRunService.getAllParkRunners(), HttpStatus.OK);
 		
 	}
 	
 	@GetMapping("/{parkRunId}")
 	public ResponseEntity<ParkRunner> getParkRunner(@PathVariable Long parkRunId) throws ParkRunException {
 		
-		return new ResponseEntity<ParkRunner>(parkRunnerService.getParkRunnerById(parkRunId), HttpStatus.OK);
+		return new ResponseEntity<ParkRunner>(parkRunService.getParkRunnerById(parkRunId), HttpStatus.OK);
 		
 	}
 	
 	@PostMapping
 	public ResponseEntity<ParkRunResponse> registerRunner(@RequestBody ParkRunner toBeParkRunner) {
 		
-		return new ResponseEntity<>(parkRunnerService.registerRunner(toBeParkRunner), HttpStatus.CREATED);
+		return new ResponseEntity<>(parkRunService.registerRunner(toBeParkRunner), HttpStatus.CREATED);
 	}
 	
 	@PatchMapping("/{parkRunId}")
 	public ResponseEntity<ParkRunResponse> partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody ParkRunner updateRunnerProfile) throws ParkRunException {
 		
-		return new ResponseEntity<>(parkRunnerService.updateRunnerProfile(parkRunId, updateRunnerProfile), HttpStatus.OK);
+		return new ResponseEntity<>(parkRunService.updateRunnerProfile(parkRunId, updateRunnerProfile), HttpStatus.OK);
 		
 	}
 	

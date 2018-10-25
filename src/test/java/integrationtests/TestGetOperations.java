@@ -1,11 +1,11 @@
-package com.xp.springboot.integrationtest.crudtests;
+package integrationtests;
 
 import org.jsmart.zerocode.core.domain.JsonTestCase;
 import org.jsmart.zerocode.core.domain.TargetEnv;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import com.xp.springboot.application.E2eJunitRunner;
+import testconfig.E2eJunitRunner;
 
 @TargetEnv("application_host.properties")
 @RunWith(E2eJunitRunner.class)
