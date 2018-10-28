@@ -40,15 +40,15 @@ public class ParkRun {
 	
 	@GetMapping
 	public ResponseEntity<List<ParkRunner>> geAllParkRunners() {
-		
-		return new ResponseEntity<List<ParkRunner>>(parkRunService.getAllParkRunners(), HttpStatus.OK);
+
+		return new ResponseEntity<>(parkRunService.getAllParkRunners(), HttpStatus.OK);
 		
 	}
 	
 	@GetMapping("/{parkRunId}")
 	public ResponseEntity<ParkRunner> getParkRunner(@PathVariable Long parkRunId) throws ParkRunException {
 		
-		return new ResponseEntity<ParkRunner>(parkRunService.getParkRunnerById(parkRunId), HttpStatus.OK);
+		return new ResponseEntity<>(parkRunService.getParkRunnerById(parkRunId), HttpStatus.OK);
 		
 	}
 	

@@ -10,11 +10,7 @@
          },
          "assertions":{
             "status":200,
-            "body":[
-               {
-                  "parkRunId":"$NOT.NULL"
-               }
-            ]
+            "body": "${JSON.FILE:reusable_content/response/get_all_parkrunners_response_body.json}"
          }
       }
    ]

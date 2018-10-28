@@ -12,10 +12,6 @@ public class ErrorResponse {
 		this.message=message;
 	}
 		
-	public static ErrorResponse buildErrorResponse(String id, String code, String message) {
-	
-		return new ErrorResponse(id, code, message);
-	}
 
 	/**
 	 * @return the id

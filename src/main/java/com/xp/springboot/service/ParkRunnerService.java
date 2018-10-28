@@ -36,8 +36,8 @@ public class ParkRunnerService implements ParkRunServices{
 
 	@Override
 	public List<ParkRunner> getAllParkRunners() {
-		List<ParkRunner> parkRunnerList = new ArrayList<ParkRunner>();
-		
+		List<ParkRunner> parkRunnerList = new ArrayList<>();
+
 		parkRunnerRepository.findAll().forEach(parkRunner -> parkRunnerList.add(parkRunner));
 		return parkRunnerList;
 

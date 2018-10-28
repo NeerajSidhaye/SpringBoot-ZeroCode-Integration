@@ -75,6 +75,7 @@
                   <configuration>
                       <includes>
                           <include>testsuite.IntegrationTestSuite.java</include>
+                          <include>testsuite.UnitTestSuite.java</include>
                       </includes>
                   </configuration>	              
 	          </execution>

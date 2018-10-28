@@ -12,7 +12,7 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<ErrorResponse> handleException(ParkRunException parkRunException) {
 		
 		String code = parkRunException.getCode();
-		ErrorResponse errorResponse = ErrorResponse.buildErrorResponse(parkRunException.getId(), code, parkRunException.getMessage());
+		ErrorResponse errorResponse = new ErrorResponse(parkRunException.getId(), code, parkRunException.getMessage());
 		switch (code) {
 		
 			case  "404" :

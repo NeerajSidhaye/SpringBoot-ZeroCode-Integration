@@ -51,6 +51,7 @@ public class ParkRunException extends Exception {
 	/**
 	 * @return the message
 	 */
+	@Override
 	public String getMessage() {
 		return message;
 	}
