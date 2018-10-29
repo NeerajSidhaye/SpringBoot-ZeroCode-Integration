@@ -47,7 +47,8 @@ e.g.
                   <goal>verify</goal>
                   <configuration>
                     <includes>
-                      <include>integrationtests.IntegrationTestSuite.java</include>
+                      <include>testsuite.IntegrationTestSuite.java</include>
+                      <include>testsuite.UnitTestSuite.java</include>
                     </includes>
                  </configuration>
               </goals>
@@ -154,7 +155,7 @@ Find detailed TEST Reports (zerocode-junit-interactive-fuzzy-search.html) and lo
 Refer to steps 1 to 10 on my article, to follow preferred build pipeline approach to get BEST out of ZeroCode and TDD combination!
 
 https://medium.com/@bethecodewithyou/develop-zerodefect-apis-with-zerocode-cadd9dc2a430
-OR at  https://extremeportal.blogspot.com/2018/10/zerodefect-rest-apis-with-zerocode.html
+OR at  https://extremeportal.blogspot.com/2018/10/develop-zerodefect-apis-with-zerocode.html
 
 
 [How do I do integration testing of a spring boot application]: https://github.com/authorjapps/spring-boot-integration-test#spring-boot-integration-test

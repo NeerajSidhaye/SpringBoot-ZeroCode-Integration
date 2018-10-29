@@ -7,6 +7,12 @@ import org.junit.runner.RunWith;
 
 import testconfig.E2eJunitRunner;
 
+/**
+ * 
+ * @author Neeraj Sidhaye
+ *
+ */
+
 @TargetEnv("application_host.properties")
 @RunWith(E2eJunitRunner.class)
 public class TestGetOperations {
