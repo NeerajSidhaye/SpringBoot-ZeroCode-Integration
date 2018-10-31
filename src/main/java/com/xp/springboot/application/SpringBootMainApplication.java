@@ -25,5 +25,5 @@ public class SpringBootMainApplication {
     public static void start()  {
     	 SpringApplication.run(SpringBootMainApplication.class);
     }
-	
+    
 }
