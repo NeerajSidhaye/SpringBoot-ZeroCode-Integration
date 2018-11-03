@@ -1,3 +1,8 @@
+Maven and CI
+====
+
+**Continuous Integration:** [![Build Status](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration.svg?branch=master)](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration) <br/>
+
 # Spring-boot, Spring-Data, H2 In-Memory DB application - Integration-testing
 This demo project exaplins how [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework based integration-tests for a "spring-boot, spring-data and H2 in-memory DB" application can make your life easy everyday.
 
