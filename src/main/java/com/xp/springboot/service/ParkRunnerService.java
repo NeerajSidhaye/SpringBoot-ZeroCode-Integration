@@ -7,9 +7,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.xp.springboot.entity.ParkRunner;
 import com.xp.springboot.exception.ParkRunException;
 import com.xp.springboot.model.ParkRunResponse;
-import com.xp.springboot.model.ParkRunner;
 import com.xp.springboot.respository.ParkRunnerRepository;
 
 

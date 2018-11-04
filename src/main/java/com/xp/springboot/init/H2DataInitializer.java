@@ -5,7 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import com.xp.springboot.model.ParkRunner;
+import com.xp.springboot.entity.ParkRunner;
 import com.xp.springboot.respository.ParkRunnerRepository;
 
 @Component

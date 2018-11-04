@@ -22,9 +22,9 @@ import org.springframework.util.ResourceUtils;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.xp.springboot.entity.ParkRunner;
 import com.xp.springboot.exception.GlobalExceptionHandler;
 import com.xp.springboot.exception.ParkRunException;
-import com.xp.springboot.model.ParkRunner;
 import com.xp.springboot.resource.ParkRun;
 import com.xp.springboot.service.ParkRunnerService;
 

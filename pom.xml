@@ -51,6 +51,11 @@
       <version>1.2.8</version>
       <scope>test</scope>
     </dependency>
+	<dependency>
+	  <groupId>org.modelmapper</groupId>
+	  <artifactId>modelmapper</artifactId>
+	  <version>2.3.0</version>
+	</dependency>	    
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -60,9 +65,22 @@
   <build>
 	<plugins>
 		<plugin>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-maven-plugin</artifactId>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-maven-plugin</artifactId>
 		</plugin>
+		<plugin>
+	      <groupId>org.sonarsource.scanner.maven</groupId>
+	      <artifactId>sonar-maven-plugin</artifactId>
+	      <version>3.3.0.603</version>
+	      <executions>
+	        <execution>
+	          <phase>verify</phase>
+	          <goals>
+	            <goal>sonar</goal>
+	          </goals>
+	        </execution>
+	      </executions>
+	    </plugin>
 		<plugin>
 	      <groupId>org.apache.maven.plugins</groupId>
 	      <artifactId>maven-failsafe-plugin</artifactId>
