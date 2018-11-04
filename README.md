@@ -1,13 +1,7 @@
 SonarQube Scanner for Maven
 ====
 
-[![Build Status](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration.svg?branch=master)], 
- 
-[![Quality Gates](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=alert_status)], 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=bugs)], 
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=vulnerabilities)], 
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=security_rating)], 
-[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=reliability_rating)] <br/>
+[![Build Status](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration.svg?branch=master)](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration)
 
 
 # Spring-boot, Spring-Data, H2 In-Memory DB application - Integration-testing
