@@ -1,4 +1,13 @@
 
+[![Quality Gates](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=alert_status)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=bugs)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=bugs)
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=vulnerabilities)
+
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=security_rating)
+
+
 # Spring-boot, Spring-Data, H2 In-Memory DB application - Integration-testing
 This demo project exaplins how [JUnit](https://github.com/junit-team/junit4) and [Zerocode](https://github.com/authorjapps/zerocode) test framework based integration-tests for a "spring-boot, spring-data and H2 in-memory DB" application can make your life easy everyday.
 
