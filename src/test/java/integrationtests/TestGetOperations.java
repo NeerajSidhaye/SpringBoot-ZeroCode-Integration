@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 
 import testconfig.E2eJunitRunner;
 
+
 /**
  * 
  * @author Neeraj Sidhaye
@@ -25,6 +26,12 @@ public class TestGetOperations {
     @Test
     @JsonTestCase("integration_tests/get/get_parkRun_by_id.json")
     public void test_getParkRunnerWithValidAndInvalidParkRunId(){
+    	
+    }
+    
+    @Test
+    @JsonTestCase("integration_tests/get/dbexecutor/get_parkrunners_using_db_executor.json")
+    public void test_getParkRunners_using_DBExecutor() {
     	
     }
     

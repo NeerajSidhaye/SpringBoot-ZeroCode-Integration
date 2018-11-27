@@ -42,7 +42,6 @@ public class ParkRun {
 		
 	}
 	
-	
 	@GetMapping
 	public ResponseEntity<List<ParkRunner>> geAllParkRunners() {
 
@@ -60,24 +59,16 @@ public class ParkRun {
 	@PostMapping
 	public ResponseEntity<ParkRunResponse> registerRunner(@RequestBody RegisterRunnerDTO toBeParkRunner) {
 		
-		return new ResponseEntity<>(parkRunService.registerRunner(convertRegisterRunnerDtoToEntity(toBeParkRunner)), HttpStatus.CREATED);
+		ParkRunner parkRunnerEntity = modelMapper.map(toBeParkRunner, ParkRunner.class);
+		return new ResponseEntity<>(parkRunService.registerRunner(parkRunnerEntity), HttpStatus.CREATED);
 	}
 	
 	@PatchMapping("/{parkRunId}")
 	public ResponseEntity<ParkRunResponse> partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody PartialUpdateDTO updateRunnerProfile) throws ParkRunException {
 		
+		ParkRunner parkRunnerEntity = modelMapper.map(updateRunnerProfile, ParkRunner.class);
+		return new ResponseEntity<>(parkRunService.updateRunnerProfile(parkRunId, parkRunnerEntity), HttpStatus.OK);
 		
-		return new ResponseEntity<>(parkRunService.updateRunnerProfile(parkRunId, convertPartialUpdateDtoToEntity(updateRunnerProfile)), HttpStatus.OK);
-		
-	}
-	
-	private ParkRunner  convertPartialUpdateDtoToEntity(PartialUpdateDTO partialUpdateDTO) {
-
-		return modelMapper.map(partialUpdateDTO, ParkRunner.class);
-	}
-	
-	private ParkRunner convertRegisterRunnerDtoToEntity(RegisterRunnerDTO registerRunner) {
-		return modelMapper.map(registerRunner, ParkRunner.class);
 	}
 	
 }

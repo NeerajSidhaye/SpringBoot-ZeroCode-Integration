@@ -1,13 +1,11 @@
-SonarQube Scanner for Maven
-====
 
-[![Build Status](https://travis-ci.com/BeTheCodeWithYou/SpringBoot-ZeroCode-Integration.svg?branch=master)], 
- 
-[![Quality Gates](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=alert_status)], 
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=bugs)], 
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=vulnerabilities)], 
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=security_rating)], 
-[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=BeTheCodeWithYou_SpringBoot-ZeroCode-Integration&metric=reliability_rating)] <br/>
+[![Quality Gates](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=alert_status)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=alert_status)
+
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=bugs)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=bugs)
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=vulnerabilities)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=vulnerabilities)
+
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=security_rating)](https://sonarcloud.io/api/project_badges/measure?project=com.xp.springboot.rest%3ASpringbootRestInMemoryDB&metric=security_rating)
 
 
 # Spring-boot, Spring-Data, H2 In-Memory DB application - Integration-testing

@@ -1,0 +1,30 @@
+{
+   "scenarioName":"Get runner by firstName",
+   "steps":[
+      {
+         "name":"DB_Executor_test",
+         "url":"com.xp.springboot.respository.DBSqlExecutor",
+         "operation":"executeSimpleSql",
+         "request":"select * from park_runner",
+         "assertions":[
+            {
+               "firstName":"NEERAJ"
+            }
+         ]
+      },
+      {
+         "name":"DB_Executor_test",
+         "url":"com.xp.springboot.respository.DBSqlExecutor",
+         "operation":"executeSqlWithParam",
+         "request":{
+            "sqlQuery":"select * from park_runner where first_name=?",
+            "paramValue":"NEERAJ"
+         },
+         "assertions":[
+            {
+               "firstName":"NEERAJ"
+            }
+         ]
+      }
+   ]
+}
