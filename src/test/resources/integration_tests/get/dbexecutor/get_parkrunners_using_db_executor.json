@@ -1,5 +1,5 @@
 {
-   "scenarioName":"Get runner by firstName",
+   "scenarioName":"DB Executor scenario",
    "steps":[
       {
          "name":"DB_Executor_test",
@@ -8,7 +8,12 @@
          "request":"select * from park_runner",
          "assertions":[
             {
-               "firstName":"NEERAJ"
+              "parkRunId" : 1,
+			  "firstName" : "NEERAJ",
+			  "lastName" : "SIDHAYE",
+			  "gender" : "M",
+			  "homeRun" : "INDORE",
+			  "totalRuns" : "28"
             }
          ]
       },
@@ -22,7 +27,9 @@
          },
          "assertions":[
             {
-               "firstName":"NEERAJ"
+              "parkRunId" : 1,
+			  "homeRun" : "INDORE",
+			  "totalRuns" : "28"
             }
          ]
       }
