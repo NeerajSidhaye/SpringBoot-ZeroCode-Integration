@@ -15,7 +15,7 @@ import testconfig.E2eJunitRunner;
 public class TestDbOperations {
 
     @Test
-    @JsonTestCase("integration_tests/get/dbexecutor/get_parkrunners_using_db_executor.json")
+    @JsonTestCase("integration_tests/dbexecutor/get_parkrunners_using_db_executor.json")
     public void test_getParkRunners_using_DBExecutor() {
     }
 }
