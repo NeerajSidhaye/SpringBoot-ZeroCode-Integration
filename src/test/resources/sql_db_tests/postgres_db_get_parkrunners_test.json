@@ -1,5 +1,5 @@
 {
-    "scenarioName": "DB Executor scenario",
+    "scenarioName": "Postgres DB SQL Executor - Simple and generic one, you can extend to ",
     "steps": [
         {
             "name": "fetch_all",
