@@ -12,6 +12,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <version.zerocode-rest-bdd>1.2.8</version.zerocode-rest-bdd>
+        <version.postgresql>42.1.4</version.postgresql>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -68,6 +69,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${version.postgresql}</version>
         </dependency>
     </dependencies>
     <build>

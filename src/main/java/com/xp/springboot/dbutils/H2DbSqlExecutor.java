@@ -19,8 +19,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SqlExecutor {
-    private static final Logger LOGGER = LoggerFactory.getLogger(SqlExecutor.class);
+public class H2DbSqlExecutor {
+    private static final Logger LOGGER = LoggerFactory.getLogger(H2DbSqlExecutor.class);
     public static final String RESULTS_KEY = "rows";
 
     @Inject

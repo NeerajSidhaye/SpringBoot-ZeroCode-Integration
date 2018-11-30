@@ -28,11 +28,5 @@ public class TestGetOperations {
     public void test_getParkRunnerWithValidAndInvalidParkRunId(){
     	
     }
-    
-    @Test
-    @JsonTestCase("integration_tests/dbexecutor/get_parkrunners_using_db_executor.json")
-    public void test_getParkRunners_using_DBExecutor() {
-    	
-    }
-    
+
 }

@@ -1,0 +1,39 @@
+{
+    "scenarioName": "DB Executor scenario",
+    "steps": [
+        {
+            "name": "fetch_all",
+            "url": "com.xp.springboot.dbutils.PostGresSqlExecutor",
+            "operation": "executeSimpleSql",
+            "request": "select * from employees;",
+            "assertions": {
+                "rows.SIZE": 2,
+                "rows": [
+                    {
+                        "id": 1,
+                        "name": "Jack"
+                    },
+                    {
+                        "name": "Pulsar",
+                        "id": 2
+                    }
+                ]
+            }
+        },
+        {
+            "name": "fetch_with_where",
+            "url": "com.xp.springboot.dbutils.PostGresSqlExecutor",
+            "operation": "executeSimpleSql",
+            "request": "select id, name from employees where name='${$.fetch_all.response.rows[1].name}';",
+            "assertions": {
+                "rows.SIZE": 1,
+                "rows": [
+                    {
+                        "id": 2,
+                        "name": "${$.fetch_all.response.rows[1].name}"
+                    }
+                ]
+            }
+        }
+    ]
+}
