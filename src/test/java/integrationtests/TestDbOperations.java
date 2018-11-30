@@ -20,7 +20,7 @@ public class TestDbOperations {
     public void test_getParkRunners_using_DBExecutor() {
     }
 
-    @Ignore("Uncomment the PostGres DB config properties to run this test")
+    @Ignore("Uncomment the PostGres DB host configs to run this test in the TargetEnv properties file")
     @Test
     @JsonTestCase("integration_tests/dbexecutor/postgres_db_get_parkrunners_test.json")
     public void test_getParkRunnersFrom_postgresDb() {
