@@ -3,7 +3,7 @@
     "steps": [
         {
             "name": "exec_sql_simple",
-            "url": "com.xp.springboot.dbutils.SqlExecutor",
+            "url": "com.xp.springboot.dbutils.H2DbSqlExecutor",
             "operation": "executeSimpleSql",
             "request": "select * from park_runner",
             "assertions": {
@@ -24,7 +24,7 @@
         },
         {
             "name": "exec_sql_param",
-            "url": "com.xp.springboot.dbutils.SqlExecutor",
+            "url": "com.xp.springboot.dbutils.H2DbSqlExecutor",
             "operation": "executeSqlWithParam",
             "request": {
                 "sqlQuery": "select * from park_runner where first_name=?",
