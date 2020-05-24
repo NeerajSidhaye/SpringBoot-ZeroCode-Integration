@@ -32,9 +32,11 @@ public class SpringBootMainApplication {
     	 SpringApplication.run(SpringBootMainApplication.class);
     }
     
+
     @Bean
     public ModelMapper modelMapper() {
         return new ModelMapper();
     }
-    
+
+
 }
