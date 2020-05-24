@@ -30,6 +30,10 @@ Running the test Suite
 e.g. 
 > mvn -Dtest=IntegrationTestSuite test
 
+Running gradle task "runIntegrationTest"
+
+> gradle runIntegrationTest
+
 ### How do they integration tests run in the maven life cycle?
 e.g.
 > mvn clean install

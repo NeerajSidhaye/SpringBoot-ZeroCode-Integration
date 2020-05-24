@@ -19,6 +19,7 @@ import testconfig.E2eJunitSuiteRunner;
  *      - integrationtests.TestPostAndThenGetOperation.java
  *      - integrationtests.TestPostOperation.java
  */
+/*
 @EnvProperty("_${env}") 
 @TargetEnv("application_host.properties")
 @TestPackageRoot("integration_tests") //picks all tests from this folder and subfolders
@@ -26,3 +27,4 @@ import testconfig.E2eJunitSuiteRunner;
 public class IntegrationTestSuite {
 
 }
+*/
