@@ -43,7 +43,7 @@ task runIntegrationTest ( type : Test ) {
 }
 
 test {
-
+	systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'
 	finalizedBy jacocoTestReport
 }
 

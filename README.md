@@ -155,6 +155,37 @@ Find detailed TEST Reports (zerocode-junit-interactive-fuzzy-search.html) and lo
 
 > Trace API request/response as part of TEST execution using CORRELATION-ID from log file zerocode_rest_bdd_logs.log generated under target\logs folder.
 
+### Jacoco Test Report integration
+
+> Simply add below jacoco plugin to build.gradle
+
+```
+
+apply plugin: 'jacoco'
+
+test {
+	systemProperty 'zerocode.junit', 'gen-smart-charts-csv-reports'  // this will genreate the zerocode test csv html reports
+	finalizedBy jacocoTestReport  // report is always generated after tests run
+}
+
+jacoco {
+	toolVersion = "0.8.5"
+	reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled false
+		csv.enabled false
+		html.destination file("${buildDir}/jacocoHtml")
+	}
+
+
+```
+> Jacoco Test report
+![Dashboard Report](img/zerocode-jacoco-test-report.PNG)
+
+
 ### Zerodefect API build pipeline approach
 Refer to steps 1 to 10 on my article, to follow preferred build pipeline approach to get BEST out of ZeroCode and TDD combination!
 
