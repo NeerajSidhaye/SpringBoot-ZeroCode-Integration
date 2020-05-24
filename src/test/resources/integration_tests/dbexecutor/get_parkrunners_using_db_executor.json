@@ -1,0 +1,44 @@
+{
+    "scenarioName": "DB Executor scenario",
+    "steps": [
+        {
+            "name": "exec_sql_simple",
+            "url": "com.xp.springboot.dbutils.H2DbSqlExecutor",
+            "operation": "executeSimpleSql",
+            "request": "select * from park_runner",
+            "assertions": {
+                "rows": [
+                    {
+                        "parkRunId": 1,
+                        "firstName": "NEERAJ",
+                        "lastName": "SIDHAYE",
+                        "gender": "M",
+                        "homeRun": "INDORE",
+                        "runningClub": "NA",
+                        "totalRuns": "28",
+                        "email": "RestAPI_integrationTest@code.com",
+                        "postCode": "CW2ZZZ"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "exec_sql_param",
+            "url": "com.xp.springboot.dbutils.H2DbSqlExecutor",
+            "operation": "executeSqlWithParam",
+            "request": {
+                "sqlQuery": "select * from park_runner where first_name=?",
+                "paramValue": "NEERAJ"
+            },
+            "assertions": {
+                "rows": [
+                    {
+                        "parkRunId": 1,
+                        "homeRun": "INDORE",
+                        "totalRuns": "28"
+                    }
+                ]
+            }
+        }
+    ]
+}

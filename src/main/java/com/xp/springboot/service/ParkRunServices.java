@@ -2,9 +2,9 @@ package com.xp.springboot.service;
 
 import java.util.List;
 
+import com.xp.springboot.entity.ParkRunner;
 import com.xp.springboot.exception.ParkRunException;
 import com.xp.springboot.model.ParkRunResponse;
-import com.xp.springboot.model.ParkRunner;
 
 public interface ParkRunServices {
 

@@ -31,8 +31,12 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-jpa') 
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	compile('com.h2database:h2')
+	compile('org.postgresql:postgresql:42.1.4')
+	compile('org.modelmapper:modelmapper:2.3.7')
+	compile('javax.inject:javax.inject:1')
 	testCompile('org.jsmart:zerocode-rest-bdd:1.2.11')
-	runtime('com.h2database:h2')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 

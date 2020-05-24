@@ -2,6 +2,7 @@ package com.xp.springboot.resource;
 
 import java.util.List;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -13,9 +14,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.xp.springboot.entity.ParkRunner;
 import com.xp.springboot.exception.ParkRunException;
 import com.xp.springboot.model.ParkRunResponse;
-import com.xp.springboot.model.ParkRunner;
+import com.xp.springboot.model.dto.PartialUpdateDTO;
+import com.xp.springboot.model.dto.RegisterRunnerDTO;
 import com.xp.springboot.service.ParkRunServices;
 
 /**
@@ -28,15 +31,16 @@ import com.xp.springboot.service.ParkRunServices;
 @RequestMapping("/api/v1/runners")
 public class ParkRun {
 
-	ParkRunServices parkRunService;
+	private ParkRunServices parkRunService;
+	private ModelMapper modelMapper;
 	
 	@Autowired
-	public ParkRun(ParkRunServices parkRunServices) {
+	public ParkRun(ParkRunServices parkRunServices, ModelMapper modelMapper) {
 		
 		this.parkRunService = parkRunServices;
+		this.modelMapper = modelMapper;
 		
 	}
-	
 	
 	@GetMapping
 	public ResponseEntity<List<ParkRunner>> geAllParkRunners() {
@@ -53,15 +57,17 @@ public class ParkRun {
 	}
 	
 	@PostMapping
-	public ResponseEntity<ParkRunResponse> registerRunner(@RequestBody ParkRunner toBeParkRunner) {
+	public ResponseEntity<ParkRunResponse> registerRunner(@RequestBody RegisterRunnerDTO toBeParkRunner) {
 		
-		return new ResponseEntity<>(parkRunService.registerRunner(toBeParkRunner), HttpStatus.CREATED);
+		ParkRunner parkRunnerEntity = modelMapper.map(toBeParkRunner, ParkRunner.class);
+		return new ResponseEntity<>(parkRunService.registerRunner(parkRunnerEntity), HttpStatus.CREATED);
 	}
 	
 	@PatchMapping("/{parkRunId}")
-	public ResponseEntity<ParkRunResponse> partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody ParkRunner updateRunnerProfile) throws ParkRunException {
+	public ResponseEntity<ParkRunResponse> partialProfileUpdate(@PathVariable Long parkRunId, @RequestBody PartialUpdateDTO updateRunnerProfile) throws ParkRunException {
 		
-		return new ResponseEntity<>(parkRunService.updateRunnerProfile(parkRunId, updateRunnerProfile), HttpStatus.OK);
+		ParkRunner parkRunnerEntity = modelMapper.map(updateRunnerProfile, ParkRunner.class);
+		return new ResponseEntity<>(parkRunService.updateRunnerProfile(parkRunId, parkRunnerEntity), HttpStatus.OK);
 		
 	}
 	
