@@ -12,7 +12,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
         <version.zerocode-rest-bdd>1.2.8</version.zerocode-rest-bdd>
-        <version.postgresql>42.1.4</version.postgresql>
+        <version.postgresql>42.3.3</version.postgresql>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
